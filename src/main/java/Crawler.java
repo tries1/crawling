@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 /**
  * Created by glenn on 2017. 6. 7..
  */
-public class Test {
+public class Crawler {
     public static void main(String[] args) {
 
         try {
@@ -34,7 +34,7 @@ public class Test {
                 Elements contents = doc.select("div.list");//원하는 css부분
 
                 List<String> list = contents.stream().map(element -> {
-                    System.out.println(element.html());
+                    //System.out.println(element.html());
 
                     String title = element.getElementsByClass("title").html();
                     String artist = element.getElementsByClass("artist").html();
